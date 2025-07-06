@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: telegram-geo-relay
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
